@@ -1,0 +1,17 @@
+header {
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 8em;
+    padding: 2em 10%;
+    background: #2c3e50;
+    color: #fff;
+}
+header h1,
+header nav {
+    display: inline-block;
+}
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
