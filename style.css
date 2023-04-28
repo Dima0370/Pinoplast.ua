@@ -10,6 +10,17 @@ header {
 header h1,
 header nav {
     display: inline-block;
+    /*vertical-align: middle; /* додано для вирівнювання по вертикалі */
+
+}
+header img{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 25px;
+    top: 36px;
+    border-radius: 50%;
+    background: url(Logo.png);
 }
 header::after {
     content: '';
@@ -30,4 +41,18 @@ nav a {
     display: inline-block; /* встановлюємо властивість display як inline-block */
     text-align: center; /* вирівнюємо текст по центру */
     margin: 0 20px; /* задаємо відступи по горизонталі */
+}
+a {
+    text-decoration: none; /* Видаляє підкреслення */
+    color: inherit; /* Наслідує колір тексту батьківського елементу */
+}
+a:hover {
+    color: blue; /* змінюємо колір при наведенні курсору */
+}
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+h1 a:hover{
+    color: white;
 }
