@@ -42,11 +42,11 @@ nav a {
     text-align: center; /* вирівнюємо текст по центру */
     margin: 0 20px; /* задаємо відступи по горизонталі */
 }
-a {
+header a {
     text-decoration: none; /* Видаляє підкреслення */
     color: inherit; /* Наслідує колір тексту батьківського елементу */
 }
-a:hover {
+header a:hover {
     color: blue; /* змінюємо колір при наведенні курсору */
 }
 h1 a {
