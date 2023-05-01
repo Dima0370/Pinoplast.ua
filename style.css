@@ -1,78 +1,81 @@
 header {
-    text-align: justify;
-    letter-spacing: 1px;
-    height: 2em;
-    padding: 0.5em 5% 2em;
-    background: #2c3e50;
-    color: #fff;
-
+  text-align: justify;
+  letter-spacing: 1px;
+  height: 2em;
+  padding: 0.5em 5% 2em;
+  background: #2c3e50;
+  color: #fff;
 }
 header h1,
 header nav {
-    display: inline-block;
-    /*vertical-align: middle; /* додано для вирівнювання по вертикалі */
-
+  display: inline-block;
+  /*vertical-align: middle; /* додано для вирівнювання по вертикалі */
 }
-header img{
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    left: 25px;
-    top: 36px;
-    border-radius: 50%;
-    background: url(Logo.png);
+header img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 25px;
+  top: 36px;
+  border-radius: 50%;
+  background: url(Logo.png);
 }
 header::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 header h1 {
-    height: 100%;
+  height: 100%;
 }
 
 header h1::before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 nav a {
-    display: inline-block; /* встановлюємо властивість display як inline-block */
-    text-align: center; /* вирівнюємо текст по центру */
-    margin: 0 20px; /* задаємо відступи по горизонталі */
+  display: inline-block; /* встановлюємо властивість display як inline-block */
+  text-align: center; /* вирівнюємо текст по центру */
+  margin: 0 20px; /* задаємо відступи по горизонталі */
 }
 header a {
-    text-decoration: none; /* Видаляє підкреслення */
-    color: inherit; /* Наслідує колір тексту батьківського елементу */
+  text-decoration: none; /* Видаляє підкреслення */
+  color: inherit; /* Наслідує колір тексту батьківського елементу */
 }
 header a:hover {
-    color: blue; /* змінюємо колір при наведенні курсору */
+  color: blue; /* змінюємо колір при наведенні курсору */
 }
 h1 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-h1 a:hover{
-    color: white;
+h1 a:hover {
+  color: white;
 }
-.item{
-    transition: .35s;
-    cursor: pointer;
-    flex: 0 0 30%; /* ширина елементів - 30% контейнера */
-    margin: 10px;
+.item {
+  transition: 0.35s;
+  cursor: pointer;
+  flex: 0 0 30%; /* ширина елементів - 30% контейнера */
+  margin: 10px;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-.container:hover > :not(:hover){
-    opacity: .4;
-    transform: scale(0.9);
-} 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container:hover > :not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
 main img {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 100%;
+  height: auto;
+}
+
+#callBack {
+  height: 40px;
+  background-color: #596f86;
+}
