@@ -56,3 +56,23 @@ h1 a {
 h1 a:hover{
     color: white;
 }
+.item{
+    transition: .35s;
+    cursor: pointer;
+    flex: 0 0 30%; /* ширина елементів - 30% контейнера */
+    margin: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+.container:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+} 
+main img {
+    max-width: 100%;
+    height: auto;
+  }
