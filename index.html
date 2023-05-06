@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script defer src="script.js"></script>
+
     <title>Пінопласт Україна</title>
   </head>
   <body>
@@ -60,6 +64,17 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <input id="mySlider" type="range" min="0" max="1000" value="0" />
+    <div id="result">0</div>
+    <footer>
+      <div id="map-flex">
+        <div id="map"></div>
+      </div>
+      <nav><a href="#C1">Про нас</a><a href="#C2">Відповіді на запитання</a><a href="#C3">Зв'язок з нами</a></nav>
+      <img src="tg_icon.png" alt="Telegram" id="tg" />
+      <img src="inst_icon.png" alt="Instagram" />
+      <img src="fb_icon.png" alt="Facebook" />
+    </footer>
   </body>
 </html>

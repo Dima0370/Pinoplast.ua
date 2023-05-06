@@ -1,4 +1,5 @@
-header {
+header,
+footer {
   text-align: justify;
   letter-spacing: 1px;
   height: 2em;
@@ -78,4 +79,29 @@ main img {
 #callBack {
   height: 40px;
   background-color: #596f86;
+}
+
+footer {
+  height: 100%;
+  background-color: #e8e2cf;
+}
+
+footer img {
+  width: 35px;
+  margin-top: 15px;
+}
+
+#tg {
+  width: 40px;
+  margin-top: 15px;
+}
+
+#map {
+  height: 300px;
+  width: 400px;
+}
+
+#map-flex {
+  display: flex;
+  justify-content: flex-end;
 }
