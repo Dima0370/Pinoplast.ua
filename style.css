@@ -4,8 +4,15 @@ footer {
   letter-spacing: 1px;
   height: 2em;
   padding: 0.5em 5% 2em;
-  background: #2c3e50;
+  /*background: #2c3e50;*/
   color: #fff;
+}
+header.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 header h1,
 header nav {
@@ -55,13 +62,13 @@ h1 a {
 h1 a:hover {
   color: white;
 }
-.item {
+/*.item {
   transition: 0.35s;
   cursor: pointer;
   flex: 0 0 30%; /* ширина елементів - 30% контейнера */
-  margin: 10px;
-}
-.container {
+  /*margin: 10px;
+}*/
+/*.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +77,7 @@ h1 a:hover {
 .container:hover > :not(:hover) {
   opacity: 0.4;
   transform: scale(0.9);
-}
+}*/
 main img {
   max-width: 100%;
   height: auto;
@@ -91,11 +98,6 @@ footer img {
   margin-top: 15px;
 }
 
-#tg {
-  width: 40px;
-  margin-top: 15px;
-}
-
 #map {
   height: 300px;
   width: 400px;
@@ -105,3 +107,192 @@ footer img {
   display: flex;
   justify-content: flex-end;
 }
+/*Карусель*/
+/* стили для элемента body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.slider {
+  max-width: 800px;
+}
+
+/* дополнительные стили для этого примера */
+.slider__items {
+  counter-reset: slide;
+}
+
+.slider__item {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  counter-increment: slide;
+}
+
+.slider__item::after {
+  content: counter(slide);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.slider__item:nth-child(1) {
+  background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+}
+
+.slider__item:nth-child(2) {
+  background: linear-gradient(to right, #dd1818, #333333);
+}
+
+.slider__item:nth-child(3) {
+  background: linear-gradient(to right, #093028, #237a57);
+}
+
+.slider__item:nth-child(4) {
+  background: linear-gradient(to right, #243B55, #141E30);
+}
+
+.slider__item {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__item_inner {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 36px;
+  bottom: 36px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.slider__item_img {
+  flex: 0 0 100px;
+  max-width: 100px;
+
+}
+
+.slider__item_testimonial {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slider__item_name {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.slider__item_post {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+
+.slider__item_text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .slider__item {
+    height: 310px;
+  }
+
+  .slider__item_inner {
+    flex-direction: row;
+  }
+
+  .slider__item_testimonial {
+    margin-left: 15px;
+  }
+
+  .slider__item_img {
+    flex: 0 0 150px;
+    max-width: 150px;
+    height: 200px;
+  }
+
+  .slider__item_testimonial {
+    text-align: left;
+  }
+
+  .slider__item_post,
+  .slider__item_text {
+    display: block;
+  }
+}
+
+.btn {
+  display: block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .5);
+}
+/*Кінець каруселі*/
+body { background-color: #222;}
+
+.container2{
+margin-top: 3.7rem;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa{
+font-size: 20px;
+  font-weight: 700;
+  width: 20px;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #444;
+  box-shadow: 0 0 8px 1px;
+  transition: .5s;
+}
+.ico1:hover{ color: #0051ff}
+.ico2:hover{ color: #80c8ff}
+.ico3:hover{ color: #db0cc3}
+.ico4:hover{ color: #ff0808}
+
