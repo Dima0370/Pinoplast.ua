@@ -19,6 +19,15 @@ header nav {
   display: inline-block;
   /*vertical-align: middle; /* додано для вирівнювання по вертикалі */
 }
+nav:hover a {
+  color: #30edf4;
+}
+nav:hover a:not(:hover) {
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
 header img {
   position: absolute;
   width: 35px;
@@ -35,6 +44,8 @@ header::after {
 }
 header h1 {
   height: 100%;
+  text-transform: uppercase;
+
 }
 
 header h1::before {
@@ -46,15 +57,20 @@ header h1::before {
 nav a {
   display: inline-block; /* встановлюємо властивість display як inline-block */
   text-align: center; /* вирівнюємо текст по центру */
-  margin: 0 20px; /* задаємо відступи по горизонталі */
+  margin: 0 10px; /* задаємо відступи по горизонталі */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: 0.5s ease;
 }
-header a {
+/*header a {
   text-decoration: none; /* Видаляє підкреслення */
-  color: inherit; /* Наслідує колір тексту батьківського елементу */
-}
-header a:hover {
+  /*color: inherit; /* Наслідує колір тексту батьківського елементу */
+/*}*/
+/*header a:hover {
   color: blue; /* змінюємо колір при наведенні курсору */
-}
+/*}*/
 h1 a {
   text-decoration: none;
   color: inherit;
@@ -85,7 +101,9 @@ main img {
 
 #callBack {
   height: 40px;
-  background-color: #596f86;
+  background-color: #000000;
+  border-radius: 60px;
+  transform: rotate(-0.39deg);
 }
 
 footer {
