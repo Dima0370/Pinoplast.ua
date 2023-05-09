@@ -134,12 +134,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
+span, a{
+  color: white;
+}
 .slider {
   max-width: 800px;
 }
 
-/* дополнительные стили для этого примера */
+/*  */
 .slider__items {
   counter-reset: slide;
 }
@@ -322,6 +324,10 @@ font-size: 20px;
   margin: 2rem 0;
   font-size: 3rem;
 
+  display: flex;
+  justify-content: center; /* вирівнювання по горизонталі */
+  align-items: center; /* вирівнювання по вертикалі */
+
   opacity: 0;
   transform: translateY(20px);
 }
@@ -331,4 +337,18 @@ font-size: 20px;
   transition: all 1.5s;
   transform: translateY(0%);
 }
+.el-left{
+  text-align: left;
+  font-size: 26px;
+  flex: 1; /* призначення пропорційної ширини блоку */
+}
+.el-right{
+  text-align: right;
+  font-size: 26px;
+  flex: 1; /* призначення пропорційної ширини блоку */
+}
+.imgs{
+  max-width: 100%; /* зменшення картинки до максимальної ширини блоку */
+}
+
 /*Кінець скрол анімації*/
