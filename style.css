@@ -66,6 +66,25 @@ nav a {
   padding: 10px;
   transition: 0.5s ease;
 }
+/*Перша сторінка*/
+.containerse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagens {
+  flex: 0 0 auto;
+  margin-right: 10px; /* Змініть цю величину за потребою */
+  max-width: 500px; /* Змініть цю величину за потребою */
+}
+
+.texts {
+  font-size: 20px; /* Змініть цей розмір за потребою */
+  margin-top: 10px; /* Змініть цю величину за потребою */
+}
+
+/*Кінець першої сторінки*/
 /*header a {
   text-decoration: none; /* Видаляє підкреслення */
   /*color: inherit; /* Наслідує колір тексту батьківського елементу */
@@ -347,7 +366,7 @@ font-size: 20px;
   font-size: 26px;
   flex: 1; /* призначення пропорційної ширини блоку */
 }
-.imgs{
+.imges{
   max-width: 100%; /* зменшення картинки до максимальної ширини блоку */
 }
 
