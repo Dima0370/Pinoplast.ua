@@ -71,16 +71,39 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px; /* Змінено margin-top */
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: slide-in 2s forwards; /* Анімація виїзду */
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .imagens {
-  flex: 0 0 auto;
-  margin-right: 10px; /* Змініть цю величину за потребою */
+  transform: skew(-20deg, 10deg); /* Застосовано трансформацію skew */
+  flex: 1; /* Змінено flex на 1 */
+  text-align: right; /* Змінено text-align на right */
+  margin-left: 80px; /* Змінено margin-left */
   max-width: 500px; /* Змініть цю величину за потребою */
 }
+.imagens img {
+  display: block;
+  border-radius: 30px; /* Додано border-radius для заокруглення кутів */
+}
+
 
 .texts {
-  font-size: 20px; /* Змініть цей розмір за потребою */
+  flex: 1; /* Змінено flex на 1 */
+  font-size: 26px; /* Збільшено розмір тексту */
+  font-weight: bold; /* Додано жирний стиль */
   margin-top: 10px; /* Змініть цю величину за потребою */
 }
 
