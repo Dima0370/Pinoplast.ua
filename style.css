@@ -131,21 +131,6 @@ nav a {
   font-weight: bold; /* Додано жирний стиль */
   margin-top: 10px; /* Змініть цю величину за потребою */
 }
-.item-first-slide {
-  width: 200px;
-  height: 200px;
-}
-
-.container-first-slide{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, 200px);
-  justify-content: center;
-  max-width: 1000px;
-  height: auto;
-  width: 70%;
-  margin: 20px auto;
-}
 /*Кінець першої сторінки*/
 /*header a {
   text-decoration: none; /* Видаляє підкреслення */
