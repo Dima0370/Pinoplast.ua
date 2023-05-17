@@ -26,21 +26,6 @@ function showSliderValue() {
     interval: 10000,
   });
 });*/
-// Отримуємо елемент хідеру
-const header = document.querySelector('header');
-
-// Функція для закріплення хідеру
-function fixHeader() {
-  if (window.pageYOffset > header.offsetTop) {
-    header.classList.add('fixed');
-  } else {
-    header.classList.remove('fixed');
-  }
-}
-
-// Слідкуємо за прокруткою та викликаємо функцію закріплення хідеру
-window.addEventListener('scroll', fixHeader);
-
 
 //Скрол анімація
 function onEntry(entry) {

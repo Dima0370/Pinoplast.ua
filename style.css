@@ -1,28 +1,33 @@
+main { background-color: #524C49;}
+
 header,
 footer {
   text-align: justify;
-  letter-spacing: 1px;
-  height: 2em;
-  padding: 0.5em 5% 2em;
+  height: 1em;
+  padding: 0.1em 5% 0.1em;
   /*background: #2c3e50;*/
-  color: #fff;
 }
 
-header.fixed{
+#header{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
-  transition: all 0.3s ease-in-out;
+  height: 70px;
+  background-color: #444;
+  transition: top 0.3s ease-in-out;
+  z-index: 999; /* Задаємо менший z-index, щоб фон був позаду тексту */
 }
+
 header h1,
 header nav {
   display: inline-block;
-  /*vertical-align: middle; /* додано для вирівнювання по вертикалі */
+  position: relative; /* Для відносного позиціонування текстових елементів */
+  z-index: 1000; /* Задаємо більший z-index, щоб текст був перед фоном */
 }
 nav:hover a {
   color: #30edf4;
+  /*color: rgba(255, 251, 251, 0.68);*/
 }
 nav:hover a:not(:hover) {
   color: white;
@@ -66,6 +71,19 @@ nav a {
   padding: 10px;
   transition: 0.5s ease;
 }
+.custom-button {
+  display: inline-block;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #30edf4;
+}
 /*Перша сторінка*/
 .containerse {
   display: flex;
@@ -74,6 +92,13 @@ nav a {
   margin-top: 50px; /* Змінено margin-top */
   opacity: 0; /* Початково приховуємо контейнер */
   animation: slide-in 2s forwards; /* Анімація виїзду */
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+#div-back{
+  height: 550px;
+  background-color: #444;
+  transform: rotate(-0.39deg);
 }
 
 @keyframes slide-in {
@@ -106,7 +131,21 @@ nav a {
   font-weight: bold; /* Додано жирний стиль */
   margin-top: 10px; /* Змініть цю величину за потребою */
 }
+.item-first-slide {
+  width: 200px;
+  height: 200px;
+}
 
+.container-first-slide{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
+  max-width: 1000px;
+  height: auto;
+  width: 70%;
+  margin: 20px auto;
+}
 /*Кінець першої сторінки*/
 /*header a {
   text-decoration: none; /* Видаляє підкреслення */
@@ -152,7 +191,8 @@ main img {
 
 footer {
   height: 100%;
-  background-color: #e8e2cf;
+  /*background-color: #e8e2cf;*/
+  background-color: #83918F;
 }
 
 footer img {
@@ -335,7 +375,8 @@ img {
   background-color: rgba(255, 255, 255, .5);
 }
 /*Кінець каруселі*/
-body { background-color: #222;}
+/*body { background-color: #222;}*/
+
 
 .container2{
 margin-top: 3.7rem;
