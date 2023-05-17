@@ -75,14 +75,40 @@ nav a {
   display: inline-block;
   background-color: #444;
   color: white;
-  border: none;
+  border: 2px solid white; /* Додайте цей рядок для встановлення білої рамки */
   padding: 10px 20px;
   margin-top: 10px;
   transition: background-color 0.3s ease;
+
 }
 
 .custom-button:hover {
   background-color: #30edf4;
+}
+.arrow-down {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  animation: arrowAnimation 1s infinite;
+}
+
+
+@keyframes arrowAnimation {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
 }
 /*Перша сторінка*/
 .containerse {
@@ -132,13 +158,6 @@ nav a {
   margin-top: 10px; /* Змініть цю величину за потребою */
 }
 /*Кінець першої сторінки*/
-/*header a {
-  text-decoration: none; /* Видаляє підкреслення */
-  /*color: inherit; /* Наслідує колір тексту батьківського елементу */
-/*}*/
-/*header a:hover {
-  color: blue; /* змінюємо колір при наведенні курсору */
-/*}*/
 h1 a {
   text-decoration: none;
   color: inherit;
