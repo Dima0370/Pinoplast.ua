@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" /> -->
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="style.css" />
+
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script defer src="script.js"></script>
 
@@ -18,16 +20,8 @@
       <img src="logo.png" alt="" />
       <h1><a href="/localhost">Pinoplast</a></h1>
       <nav>
-        <a href="#C1">Про нас</a><a href="#C2">Послуги</a><a href="#C3">Ціна</a><span id="callBack"><a>Зателефонуйте мені</a></span>
+        <a href="#C1">Про нас</a><a href="#C2">Послуги</a><a href="#C3">Ціна</a><span id="callBack"><a class="form-call">Зателефонуйте мені</a></span>
       </nav>
-      <!--<ul>
-        <li><a href="#C1">Про нас</a></li>
-        <li><a href="#C2">Послуги</a></li>
-        <li><a href="#C3">Ціна</a></li>
-        <li><span id="callBack">
-          <a>Зателефонуйте мені</a>
-        </span></li>
-      </ul>-->
     </header>
 
     <main>
@@ -155,10 +149,62 @@
         <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
         <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
       </div>
+
+      <!-- FAQ-->
+      <section class="faq">
+        <header class="faq__header">
+          <h2 class="faq__title">Frequently asked questions</h2>
+        </header>
+        <hr class="faq__separator" />
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="answer1">
+            What is Lorem Ipsum?
+            <i class="faq__icon ri-arrow-drop-right-line"></i>
+          </button>
+          <div class="faq__answer" id="answer1" aria-hidden="true">
+            <div class="faq__answer-inner">
+              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="answer2">
+            How do I use Lorem Ipsum?
+            <i class="faq__icon ri-arrow-drop-right-line"></i>
+          </button>
+          <div class="faq__answer" id="answer2" aria-hidden="true">
+            <div class="faq__answer-inner">
+              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="answer3">
+            Is Lorem Ipsum free?
+            <i class="faq__icon ri-arrow-drop-right-line"></i>
+          </button>
+          <div class="faq__answer" id="answer3" aria-hidden="true">
+            <div class="faq__answer-inner">
+              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="answer4">
+            Do you offer refunds?
+            <i class="faq__icon ri-arrow-drop-right-line"></i>
+          </button>
+          <div class="faq__answer" id="answer4" aria-hidden="true">
+            <div class="faq__answer-inner">
+              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <input id="mySlider" type="range" min="0" max="1000" value="0" />
-    <div id="result">0</div>
+    <!-- <input id="mySlider" type="range" min="0" max="1000" value="0" />
+    <div id="result">0</div> -->
     <footer>
       <div id="map-flex">
         <div id="map"></div>
@@ -175,6 +221,90 @@
           <i class="ri-facebook-line"></i>
         </a>
       </div>
+
+      <!-- 
+
+
+
+      -->
+      <div class="footer__container">
+        <div class="footer__top">
+          <div>
+            <h6 class="footer__title">Microsoft Store</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">About</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Careers</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Affiliates</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer__title">Education</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">About</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Careers</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Affiliates</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer__title">Business</h6>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">About</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Careers</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Affiliates</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer__divider" />
+        <div class="footer__bottom">
+          <span class="copyright">&copy; 2023 Pinoplast.ua</span>
+        </div>
+      </div>
     </footer>
+
+    <!-- FORM -->
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
