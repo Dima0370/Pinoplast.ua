@@ -465,6 +465,12 @@ img {
 main div p, h4{
   color: black;
 }
+#proj{
+  padding-top: 93px;
+}
+#proj{
+  background: white;
+}
   .container {
     width: 750px;
   }
