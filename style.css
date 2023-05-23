@@ -138,7 +138,7 @@ nav a {
 }
 
 .imagens {
-  transform: skew(-20deg, 10deg); /* Застосовано трансформацію skew */
+  /*transform: skew(-20deg, 10deg);  Застосовано трансформацію skew */
   flex: 1; /* Змінено flex на 1 */
   text-align: right; /* Змінено text-align на right */
   margin-left: 80px; /* Змінено margin-left */
@@ -411,7 +411,7 @@ img {
 /*Скрол анімація*/
 
 .element-animation {
-  margin: 2rem 0;
+  /*margin: 2rem 0;*/
   font-size: 3rem;
 
   display: flex;
@@ -434,21 +434,23 @@ img {
 }
 
 .el-back{
-  background-color: #524c49;
+  background-color: #686868;
 }
 
 .el-left {
+  color: #f2f2f2;
+
   text-align: left;
   font-size: 24px;
-  flex: 1;
   padding: 20px;
+  margin-top: 20px;
   background-color: black;
   border-radius: 5px;
-}
-
-
-.el-left span {
-  color: #f2f2f2;
+  width: 70%;
+  height: 400px;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, -3), rgba(255, 255, 255, 0.5)), url("image.png");
+  background-repeat: no-repeat;;
+  background-size: cover
 }
 
 .imges {
@@ -463,16 +465,16 @@ img {
 }
 /*fff*/
 /*Кінець скрол анімації*/
+
 /*  Дорога замовлення*/
 
-main div p, h4{
+main div h4{
   color: black;
 }
 #proj{
   padding-top: 93px;
-}
-#proj{
   background: white;
+
 }
   .container {
     width: 750px;
