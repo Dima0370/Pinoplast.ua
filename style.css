@@ -438,10 +438,6 @@ img {
 }
 
 .el-left {
-  color: #f2f2f2;
-
-  text-align: left;
-  font-size: 24px;
   padding: 20px;
   margin-top: 20px;
   background-color: black;
@@ -464,6 +460,14 @@ img {
   width: 50%; /* Зменшити фотографію до 50% ширини */
 }
 /*fff*/
+.el-left-text{
+  color: #f2f2f2; /* Колір тексту */
+  text-align: left; /* Вирівнювання тексту по лівому краю */
+  font-size: 24px; /* Розмір шрифту */
+  width: 50%;
+  height: 380px;
+  margin-top: 60px;
+}
 /*Кінець скрол анімації*/
 
 /*  Дорога замовлення*/
