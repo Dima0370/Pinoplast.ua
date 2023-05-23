@@ -15,7 +15,7 @@ footer {
   left: 0;
   right: 0;
   height: 70px;
-  background-color: #444;
+  background-color: #323232;
   transition: top 0.3s ease-in-out;
   z-index: 999; /* Задаємо менший z-index, щоб фон був позаду тексту */
 }
@@ -119,8 +119,11 @@ nav a {
   z-index: 0;
 }
 #div-back {
+  background-image: url('stacked-waves-haikei.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 550px;
-  background-color: #444;
+  /*background-color: #444;*/
   transform: rotate(-0.39deg);
 }
 @keyframes slide-in {
