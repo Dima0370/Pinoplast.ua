@@ -462,11 +462,13 @@ img {
 /*fff*/
 .el-left-text{
   color: #f2f2f2; /* Колір тексту */
-  text-align: left; /* Вирівнювання тексту по лівому краю */
-  font-size: 24px; /* Розмір шрифту */
-  width: 50%;
-  height: 380px;
-  margin-top: 60px;
+  font-size: 18px; /* Розмір шрифту */
+  width: 40%;
+  height: 180px;
+  margin-top: 110px;
+  margin-left: 110px;
+  text-align: justify; /* Вирівнювання тексту по ширині */
+
 }
 /*Кінець скрол анімації*/
 
