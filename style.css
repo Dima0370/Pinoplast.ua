@@ -501,6 +501,7 @@ img {
 }
 
 .el-back {
+  padding-top: 93px;
   background-color: #686868;
 }
 .el-left {
@@ -544,8 +545,10 @@ main div h4 {
 }
 #proj {
   padding-top: 93px;
-  background: white;
+  background-color: white; /* Змінено на #proj, #proj * */
+
 }
+
 .container {
   width: 750px;
 }
@@ -631,6 +634,7 @@ main div h4 {
 .col-sm-11,
 .col-sm-12 {
   float: left;
+  color: black;
 }
 
 .col-sm-2 {
