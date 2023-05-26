@@ -91,8 +91,8 @@ nav a {
 }
 .arrow-down {
   position: fixed;
-  bottom: 50px;
-  left: 50%;
+  top: 265px;
+  left: 80%;
   width: 20px;
   height: 20px;
   border-bottom: 2px solid white;
@@ -112,13 +112,12 @@ nav a {
   }
 }
 /*Перша сторінка*/
+/*TODO::старий варіант сторінки*/
 .containerse {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px; /* Змінено margin-top */
-  opacity: 0; /* Початково приховуємо контейнер */
-  animation: slide-in 2s forwards; /* Анімація виїзду */
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -131,17 +130,26 @@ nav a {
   /*background-color: #444;*/
   transform: rotate(-0.39deg);
 }
-@keyframes slide-in {
+@keyframes fade-in {
   0% {
-    transform: translateX(-100%);
     opacity: 0;
+    transform: translateY(50px);
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
-
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .imagens {
   /*transform: skew(-20deg, 10deg);  Застосовано трансформацію skew */
   flex: 1; /* Змінено flex на 1 */
@@ -153,13 +161,42 @@ nav a {
   display: block;
   border-radius: 30px; /* Додано border-radius для заокруглення кутів */
 }
+/*TODO::кінець старого варіанту сторінки*/
+.imagens1 {
+  position: relative; /* Додано position: relative; */
+  text-align: right;
+  margin-top: 80px;
+  margin-left: 293px;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in 2s forwards;
+  height: 450px;
+  width: 750px;
+  z-index: 1; /* Додано z-index: 1; для збільшення пріоритету */
+}
+
+.imagens1 img {
+  display: block;
+  border-radius: 5px;
+  position: relative; /* Додано position: relative; */
+  z-index: 1; /* Додано z-index: 1; для збільшення пріоритету */
+}
 
 .texts {
-  flex: 1; /* Змінено flex на 1 */
-  font-size: 26px; /* Збільшено розмір тексту */
-  font-weight: bold; /* Додано жирний стиль */
-  margin-top: 10px; /* Змініть цю величину за потребою */
+  position: absolute; /* Додано position: absolute; */
+  top: 170px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
+  left: 220px;
+  opacity: 0; /* Початково приховуємо контейнер */
+  font-size: calc(24px + ((1vw - 4.2px) * 2.542373));
+  font-weight: bold;
+  color: black;
+  animation: fade-in-left 2s forwards;
+  z-index: 2; /* Додано z-index: 2; для збільшення пріоритету над зображенням */
+  border: darkturquoise solid;
+  letter-spacing: 0.02em;
+  line-height: 1.31;
 }
+
+
 /*Кінець першої сторінки*/
 h1 a {
   text-decoration: none;
