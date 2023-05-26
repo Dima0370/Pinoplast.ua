@@ -31,11 +31,28 @@ header nav {
   position: relative; /* Для відносного позиціонування текстових елементів */
   z-index: 1000; /* Задаємо більший z-index, щоб текст був перед фоном */
 }
-nav:hover a {
-  color: #30edf4;
-  /*color: rgba(255, 251, 251, 0.68);*/
+
+/*TODO::хІДЕР НОВИЙ*/
+header nav{
+  transition: all;
+  transition-duration: 1000ms;
 }
-nav:hover a:not(:hover) {
+header nav:hover a{
+  border-bottom: 1px solid white;
+}
+header nav:hover a:not(:hover){
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+  border-bottom: 0px solid white;
+
+}
+/*TODO::хІДЕР СТАРИЙ*/
+
+footer nav:hover a {
+  color: #30edf4;
+}
+footer nav:hover a:not(:hover) {
   color: white;
   opacity: 0.3;
   filter: blur(1px);
@@ -92,7 +109,7 @@ nav a {
 .arrow-down {
   position: fixed;
   top: 265px;
-  left: 80%;
+  left: 70%;
   width: 20px;
   height: 20px;
   border-bottom: 2px solid white;
@@ -183,20 +200,17 @@ nav a {
 
 .texts {
   position: absolute; /* Додано position: absolute; */
-  top: 170px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
-  left: 220px;
+  top: 130px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
+  left: 150px;
   opacity: 0; /* Початково приховуємо контейнер */
   font-size: calc(24px + ((1vw - 4.2px) * 2.542373));
   font-weight: bold;
   color: black;
   animation: fade-in-left 2s forwards;
   z-index: 2; /* Додано z-index: 2; для збільшення пріоритету над зображенням */
-  border: darkturquoise solid;
   letter-spacing: 0.02em;
   line-height: 1.31;
 }
-
-
 /*Кінець першої сторінки*/
 h1 a {
   text-decoration: none;
@@ -205,38 +219,13 @@ h1 a {
 h1 a:hover {
   color: white;
 }
-/*.item {
-  transition: 0.35s;
-  cursor: pointer;
-  flex: 0 0 30%; /* ширина елементів - 30% контейнера */
-/*margin: 10px;
-}*/
-/*.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.container:hover > :not(:hover) {
-  opacity: 0.4;
-  transform: scale(0.9);
-}*/
 main img {
   max-width: 100%;
   height: auto;
 }
 
-#callBack {
-  height: 40px;
-  background-color: #000000;
-  border-radius: 60px;
-  transform: rotate(-0.39deg);
-}
-
 footer {
   height: 100%;
-  /* height: 300px; */
-  /*background-color: #e8e2cf;*/
   background-color: #83918f;
 }
 
@@ -514,7 +503,6 @@ img {
 .el-back {
   background-color: #686868;
 }
-
 .el-left {
   padding: 20px;
   margin-top: 20px;
