@@ -1,6 +1,5 @@
-
-body{
-background-color: #444;
+body {
+  background-color: #444;
 }
 header,
 footer {
@@ -119,7 +118,7 @@ nav a {
   z-index: 0;
 }
 #div-back {
-  background-image: url('stacked-waves-haikei.png');
+  background-image: url("stacked-waves-haikei.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
@@ -198,16 +197,52 @@ footer {
   background-color: #83918f;
 }
 
-#map {
+/* #map {
   height: 300px;
   width: 400px;
+  padding: 0;
+  margin: 0;
   z-index: 1;
+}
+
+#map-flex {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 0px;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+} */
+
+#map {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #map-flex {
   display: flex;
   justify-content: flex-end;
+  margin: 10px 0;
 }
+
+.links-container {
+  margin-bottom: 10px;
+}
+
+.links-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-container a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
 /*Карусель*/
 /* стили для элемента body */
 /* body {
@@ -433,7 +468,7 @@ img {
   flex: 1; /* призначення пропорційної ширини блоку */
 }
 
-.el-back{
+.el-back {
   background-color: #686868;
 }
 
@@ -445,8 +480,8 @@ img {
   width: 70%;
   height: 400px;
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, -3), rgba(255, 255, 255, 0.5)), url("image.png");
-  background-repeat: no-repeat;;
-  background-size: cover
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .imges {
@@ -460,7 +495,7 @@ img {
   width: 50%; /* Зменшити фотографію до 50% ширини */
 }
 /*fff*/
-.el-left-text{
+.el-left-text {
   color: #f2f2f2; /* Колір тексту */
   font-size: 18px; /* Розмір шрифту */
   width: 40%;
@@ -468,23 +503,21 @@ img {
   margin-top: 110px;
   margin-left: 110px;
   text-align: justify; /* Вирівнювання тексту по ширині */
-
 }
 /*Кінець скрол анімації*/
 
 /*  Дорога замовлення*/
 
-main div h4{
+main div h4 {
   color: black;
 }
-#proj{
+#proj {
   padding-top: 93px;
   background: white;
-
 }
-  .container {
-    width: 750px;
-  }
+.container {
+  width: 750px;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -501,13 +534,71 @@ main div h4{
   text-align: center;
   width: 25px;
 }
-  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12 {
   float: left;
 }
 
@@ -548,11 +639,15 @@ main div h4{
 
 .icons {
   display: flex;
+  justify-content: center;
   column-gap: 25px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
+
 .icon {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   text-decoration: none;
@@ -560,9 +655,9 @@ main div h4{
   color: #fff;
   border-radius: 50%;
   outline: 2px solid #fff;
-  transition-property: outline-offset, outline-color, background-color;
-  transition-duration: 0.25s;
+  transition: outline-offset 0.25s, outline-color 0.25s, background-color 0.25s;
 }
+
 .icon:hover {
   outline-offset: 4px;
 }
@@ -681,6 +776,7 @@ i {
 /*START FAQ*/
 .faq {
   max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
