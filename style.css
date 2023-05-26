@@ -1,6 +1,9 @@
 body {
   background-color: #444;
 }
+html{
+  scroll-behavior: smooth;
+}
 header,
 footer {
   text-align: justify;
@@ -546,7 +549,6 @@ main div h4 {
 #proj {
   padding-top: 93px;
   background-color: white; /* Змінено на #proj, #proj * */
-
 }
 
 .container {
