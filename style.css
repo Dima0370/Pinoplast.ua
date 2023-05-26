@@ -7,7 +7,13 @@ footer {
   height: 1em;
   padding: 0.1em 5% 0.1em;
 }
-
+.logo {
+  fill: url(#gradient);
+  transition: fill 0.5s;
+}
+.logo:hover {
+  fill: white;
+}
 #header {
   position: fixed;
   top: 0;
@@ -35,7 +41,7 @@ nav:hover a:not(:hover) {
   filter: blur(1px);
 }
 
-header img {
+header img, svg {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -476,7 +482,7 @@ img {
   padding: 20px;
   margin-top: 20px;
   background-color: black;
-  border-radius: 5px;
+  border-radius: 100px;
   width: 70%;
   height: 400px;
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, -3), rgba(255, 255, 255, 0.5)), url("image.png");
