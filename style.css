@@ -1,5 +1,5 @@
 body {
-  background-color: #444;
+  background-color: white;
 }
 html{
   scroll-behavior: smooth;
@@ -148,7 +148,6 @@ nav a {
   background-size: cover;
   height: 550px;
   /*background-color: #444;*/
-  transform: rotate(-0.39deg);
 }
 @keyframes fade-in {
   0% {
@@ -164,6 +163,16 @@ nav a {
   0% {
     opacity: 0;
     transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
   }
   100% {
     opacity: 1;
@@ -651,14 +660,20 @@ main div h4 {
 .text_left {
   padding: 10px 10px 10px 6%;
   text-align: left;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in-right 2s forwards;
 }
 .text_right {
   padding: 10px 6% 10px 10px;
   text-align: right;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in-left 2s forwards;
 }
 .text_center {
   padding: 0;
   text-align: center;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in 2s forwards;
 }
 .banner {
   padding: 100px 0;
