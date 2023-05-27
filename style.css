@@ -454,7 +454,6 @@ img {
   background-color: rgba(255, 255, 255, 0.5);
 }
 /*Кінець каруселі*/
-/*body { background-color: #222;}*/
 
 .container2 {
   margin-top: 3.7rem;
@@ -904,7 +903,7 @@ i {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #f3f3f3;
+  background-color: black;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
