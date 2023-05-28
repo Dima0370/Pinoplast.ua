@@ -1,14 +1,21 @@
-
-body{
-background-color: #444;
+body {
+  background-color: white;
 }
-header,
-footer {
+html {
+  scroll-behavior: smooth;
+}
+header {
   text-align: justify;
   height: 1em;
   padding: 0.1em 5% 0.1em;
 }
-
+.logo {
+  fill: url(#gradient);
+  transition: fill 0.5s;
+}
+.logo:hover {
+  fill: white;
+}
 #header {
   position: fixed;
   top: 0;
@@ -26,17 +33,34 @@ header nav {
   position: relative; /* Для відносного позиціонування текстових елементів */
   z-index: 1000; /* Задаємо більший z-index, щоб текст був перед фоном */
 }
-nav:hover a {
-  color: #30edf4;
-  /*color: rgba(255, 251, 251, 0.68);*/
+
+/*TODO::хІДЕР НОВИЙ*/
+header nav {
+  transition: all;
+  transition-duration: 1000ms;
 }
-nav:hover a:not(:hover) {
+header nav:hover a {
+  border-bottom: 1px solid white;
+}
+header nav:hover a:not(:hover) {
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+  border-bottom: 0px solid white;
+}
+/*TODO::хІДЕР СТАРИЙ*/
+
+footer nav:hover a {
+  color: #30edf4;
+}
+footer nav:hover a:not(:hover) {
   color: white;
   opacity: 0.3;
   filter: blur(1px);
 }
 
-header img {
+header img,
+svg {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -86,8 +110,8 @@ nav a {
 }
 .arrow-down {
   position: fixed;
-  bottom: 50px;
-  left: 50%;
+  top: 265px;
+  left: 70%;
   width: 20px;
   height: 20px;
   border-bottom: 2px solid white;
@@ -107,38 +131,55 @@ nav a {
   }
 }
 /*Перша сторінка*/
+/*TODO::старий варіант сторінки*/
 .containerse {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px; /* Змінено margin-top */
-  opacity: 0; /* Початково приховуємо контейнер */
-  animation: slide-in 2s forwards; /* Анімація виїзду */
   width: 100%;
   height: 100%;
   z-index: 0;
 }
 #div-back {
-  background-image: url('stacked-waves-haikei.png');
+  background-image: url("stacked-waves-haikei.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
   /*background-color: #444;*/
-  transform: rotate(-0.39deg);
 }
-@keyframes slide-in {
+@keyframes fade-in {
   0% {
-    transform: translateX(-100%);
     opacity: 0;
+    transform: translateY(50px);
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
-
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .imagens {
-  transform: skew(-20deg, 10deg); /* Застосовано трансформацію skew */
+  /*transform: skew(-20deg, 10deg);  Застосовано трансформацію skew */
   flex: 1; /* Змінено flex на 1 */
   text-align: right; /* Змінено text-align на right */
   margin-left: 80px; /* Змінено margin-left */
@@ -148,12 +189,38 @@ nav a {
   display: block;
   border-radius: 30px; /* Додано border-radius для заокруглення кутів */
 }
+/*TODO::кінець старого варіанту сторінки*/
+.imagens1 {
+  position: relative; /* Додано position: relative; */
+  text-align: right;
+  margin-top: 80px;
+  margin-left: 293px;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in 2s forwards;
+  height: 450px;
+  width: 750px;
+  z-index: 1; /* Додано z-index: 1; для збільшення пріоритету */
+}
+
+.imagens1 img {
+  display: block;
+  border-radius: 5px;
+  position: relative; /* Додано position: relative; */
+  z-index: 1; /* Додано z-index: 1; для збільшення пріоритету */
+}
 
 .texts {
-  flex: 1; /* Змінено flex на 1 */
-  font-size: 26px; /* Збільшено розмір тексту */
-  font-weight: bold; /* Додано жирний стиль */
-  margin-top: 10px; /* Змініть цю величину за потребою */
+  position: absolute; /* Додано position: absolute; */
+  top: 130px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
+  left: 150px;
+  opacity: 0; /* Початково приховуємо контейнер */
+  font-size: calc(24px + ((1vw - 4.2px) * 2.542373));
+  font-weight: bold;
+  color: black;
+  animation: fade-in-left 2s forwards;
+  z-index: 2; /* Додано z-index: 2; для збільшення пріоритету над зображенням */
+  letter-spacing: 0.02em;
+  line-height: 1.31;
 }
 /*Кінець першої сторінки*/
 h1 a {
@@ -163,51 +230,68 @@ h1 a {
 h1 a:hover {
   color: white;
 }
-/*.item {
-  transition: 0.35s;
-  cursor: pointer;
-  flex: 0 0 30%; /* ширина елементів - 30% контейнера */
-/*margin: 10px;
-}*/
-/*.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.container:hover > :not(:hover) {
-  opacity: 0.4;
-  transform: scale(0.9);
-}*/
 main img {
   max-width: 100%;
   height: auto;
 }
 
-#callBack {
-  height: 40px;
-  background-color: #000000;
-  border-radius: 60px;
-  transform: rotate(-0.39deg);
-}
-
 footer {
   height: 100%;
-  /* height: 300px; */
-  /*background-color: #e8e2cf;*/
   background-color: #83918f;
 }
 
-#map {
+/* #map {
   height: 300px;
   width: 400px;
+  padding: 0;
+  margin: 0;
   z-index: 1;
 }
 
 #map-flex {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 0px;
+  margin: 10px;
   display: flex;
   justify-content: flex-end;
+} */
+
+#map {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
 }
+
+#map-flex {
+  /* display: flex; */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* justify-content: flex-start; Змінено на flex-start */
+}
+
+.links-container {
+  margin: 20px 0 20px 0;
+}
+
+.links-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-container a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}
+
 /*Карусель*/
 /* стили для элемента body */
 /* body {
@@ -375,7 +459,6 @@ img {
   background-color: rgba(255, 255, 255, 0.5);
 }
 /*Кінець каруселі*/
-/*body { background-color: #222;}*/
 
 .container2 {
   margin-top: 3.7rem;
@@ -411,7 +494,7 @@ img {
 /*Скрол анімація*/
 
 .element-animation {
-  margin: 2rem 0;
+  /*margin: 2rem 0;*/
   font-size: 3rem;
 
   display: flex;
@@ -433,22 +516,20 @@ img {
   flex: 1; /* призначення пропорційної ширини блоку */
 }
 
-.el-back{
-  background-color: #524c49;
+.el-back {
+  padding-top: 93px;
+  background-color: #686868;
 }
-
 .el-left {
-  text-align: left;
-  font-size: 24px;
-  flex: 1;
   padding: 20px;
+  margin-top: 20px;
   background-color: black;
-  border-radius: 5px;
-}
-
-
-.el-left span {
-  color: #f2f2f2;
+  border-radius: 100px;
+  width: 70%;
+  height: 400px;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, -3), rgba(255, 255, 255, 0.5)), url("image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .imges {
@@ -462,21 +543,30 @@ img {
   width: 50%; /* Зменшити фотографію до 50% ширини */
 }
 /*fff*/
+.el-left-text {
+  color: #f2f2f2; /* Колір тексту */
+  font-size: 18px; /* Розмір шрифту */
+  width: 40%;
+  height: 180px;
+  margin-top: 110px;
+  margin-left: 110px;
+  text-align: justify; /* Вирівнювання тексту по ширині */
+}
 /*Кінець скрол анімації*/
+
 /*  Дорога замовлення*/
 
-main div p, h4{
+main div h4 {
   color: black;
 }
-#proj{
+#proj {
   padding-top: 93px;
+  background-color: white; /* Змінено на #proj, #proj * */
 }
-#proj{
-  background: white;
+
+.container {
+  width: 750px;
 }
-  .container {
-    width: 750px;
-  }
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -493,14 +583,73 @@ main div p, h4{
   text-align: center;
   width: 25px;
 }
-  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12 {
   float: left;
+  color: black;
 }
 
 .col-sm-2 {
@@ -515,14 +664,20 @@ main div p, h4{
 .text_left {
   padding: 10px 10px 10px 6%;
   text-align: left;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in-right 2s forwards;
 }
 .text_right {
   padding: 10px 6% 10px 10px;
   text-align: right;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in-left 2s forwards;
 }
 .text_center {
   padding: 0;
   text-align: center;
+  opacity: 0; /* Початково приховуємо контейнер */
+  animation: fade-in 2s forwards;
 }
 .banner {
   padding: 100px 0;
@@ -540,21 +695,25 @@ main div p, h4{
 
 .icons {
   display: flex;
+  justify-content: center;
   column-gap: 25px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
+
 .icon {
   display: inline-flex;
-  width: 60px;
-  height: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   text-decoration: none;
   font-size: 26px;
   color: #fff;
   border-radius: 50%;
   outline: 2px solid #fff;
-  transition-property: outline-offset, outline-color, background-color;
-  transition-duration: 0.25s;
+  transition: outline-offset 0.25s, outline-color 0.25s, background-color 0.25s;
 }
+
 .icon:hover {
   outline-offset: 4px;
 }
@@ -673,6 +832,7 @@ i {
 /*START FAQ*/
 .faq {
   max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -684,6 +844,7 @@ i {
 .faq__title {
   color: #fff;
   margin-bottom: 20px;
+  text-align: center;
 }
 .faq__separator {
   border: 1px solid rgb(219 222 225 / 15%);
@@ -748,7 +909,7 @@ i {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #f3f3f3;
+  background-color: black;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
