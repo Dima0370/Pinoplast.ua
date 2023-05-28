@@ -7,13 +7,15 @@ const getPosition = function () {
   }
 };
 
-var map = L.map("map").setView([49.86365979573527, 24.040477857333414], 15);
-var marker = L.marker([49.86365979573527, 24.040477857333414]).addTo(map);
+var map = L.map("map").setView([49.86360663663534, 24.040539034816224], 15);
+var marker = L.marker([49.86360663663534, 24.040539034816224]).addTo(map);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
+
+L.marker([49.86360663663534, 24.040539034816224]).addTo(map).bindPopup("Вулиця Липинського, 54а <br> Пн-Сб: 08:00-20:00").openPopup();
 
 // mySlider.oninput = showSliderValue;
 
