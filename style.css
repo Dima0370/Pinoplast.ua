@@ -517,6 +517,7 @@ img {
 }
 
 .el-back {
+  position: relative;
   padding-top: 93px;
   background-color: #686868;
 }
@@ -551,6 +552,42 @@ img {
   margin-top: 110px;
   margin-left: 110px;
   text-align: justify; /* Вирівнювання тексту по ширині */
+}
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 700px solid black;
+  border-right: 500px solid transparent;
+}
+.triangle2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 700px solid black;
+  border-left: 500px solid transparent;
+}
+.triangle3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 654px solid black;
+  border-left: 500px solid transparent;
+}
+.triangle4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 654px solid black;
+  border-right: 500px solid transparent;
 }
 /*Кінець скрол анімації*/
 
