@@ -3,7 +3,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  font-family: Lato, Arial, sans-serif;
+  font-family: Raleway, Arial, sans-serif;
 }
 header {
   text-align: justify;
@@ -118,6 +118,10 @@ nav a {
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   animation: arrowAnimation 1s infinite;
+}
+.selector {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 36px;
 }
 
 @keyframes arrowAnimation {
