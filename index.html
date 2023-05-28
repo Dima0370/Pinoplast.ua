@@ -17,10 +17,20 @@
   </head>
   <body>
     <header id="header">
-      <img src="logo.png" alt="" />
-      <h1><a href=".">Pinoplast</a></h1>
+      <!--<img src="logo.png" alt="" />-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: #ff0000;" />
+            <stop offset="50%" style="stop-color: #00ff00;" />
+            <stop offset="100%" style="stop-color: #0000ff;" />
+          </linearGradient>
+        </defs>
+        <image class="logo" href="logo-no-background.svg" width="100" height="100" />
+      </svg>
+      <h1><a href="#div-back">Pinoplast</a></h1>
       <nav>
-        <a href="#C1">Про нас</a><a href="#C2">Послуги</a><a href="#C3">Ціна</a><span id="callBack"><a class="form-call">Зателефонуйте мені</a></span>
+        <a href="#div-back">Головна</a><a href="#C2">Про нас</a><a href="#proj">Послуги</a><span><a class="form-call">Зателефонуйте мені</a></span>
       </nav>
     </header>
 
@@ -28,25 +38,28 @@
       <section class="containerse" id="div-back">
         <div>
           <div>
-            <h2 id="C1"></h2>
+            <h2  id="C1" ></h2>
           </div>
           <div class="texts">
-            <a>Збережіть тепло та енергію з найкращим</a>
+            <a>Збережіть тепло та енергію</a>
             <div>
-              <a>пінопластом від нашого онлайн магазину!</a>
+              <a>з найкращим пінопластом </a>
+            </div>
+            <div>
+              <a>від нашого магазину!</a>
             </div>
             <button class="custom-button">Купити зараз</button>
             <div class="arrow-down"></div>
           </div>
         </div>
-        <div class="imagens">
+        <div class="imagens1">
           <img src="firstslaid.jpg" alt="slide1" />
         </div>
       </section>
 
       <section>
-        <div class="el-back">
-          <h2 id="C2"></h2>
+        <div class="el-back" id="C2">
+          <h2 ></h2>
           <div class="element-animation">
             <div class="el-left">
               <div class="el-left-text">
@@ -59,7 +72,9 @@
           </div>
           <div class="element-animation">
             <div class="el-left">
-              <span> Додатковою перевагою є можливість швидкого та якісного встановлення придбаного пінопласту на ваш об'єкт. </span>
+              <span>
+                Додатковою перевагою є можливість швидкого та якісного встановлення придбаного пінопласту на ваш об'єкт.
+              </span>
             </div>
             <!--<div class="imges">
               <img src="image2.png" alt="Фото 2" />
@@ -67,32 +82,20 @@
           </div>
           <div class="element-animation">
             <div class="el-left">
+              <div class="el-left-text" >
               <span>
-                Широкий асортимент пінопласту від провідних виробників: виберіть оптимальний варіант для вашого будівельного проекту з нашого каталогу високоякісних пінопластових матеріалів!</span
-              >
+                Широкий асортимент пінопласту від провідних виробників: виберіть оптимальний варіант для вашого будівельного проекту з нашого каталогу високоякісних пінопластових матеріалів!
+              </span>
+              </div>
+              <!--<div class="imges">
+                <img src="image3.png" alt="Фото 3" />
+              </div>-->
             </div>
-            <!--<div class="imges">
-              <img src="image3.png" alt="Фото 3" />
-            </div>-->
           </div>
         </div>
       </section>
-      <!--<section>
-        <div>
-          <h2 id="C3">Заголовок 3</h2>
-          <div class="container">
-            <div class="item">
-              <img src="image4.png" alt="Фото 1" />
-            </div>
-            <div class="item">
-              <img src="image4.png" alt="Фото 1" />
-            </div>
-            <div class="item">
-              <img src="image4.png" alt="Фото 1" />
-            </div>
-          </div>
-        </div>
-      </section>-->
+
+      <section>
       <div id="proj">
         <div class="container">
           <div class="col-md-12 projects_container text-10">
@@ -153,8 +156,8 @@
           </div>
         </div>
       </div>
-
-      <!--  слайдер-->
+      </section>
+      <!--  слайдер
       <h2 id="C3"></h2>
       <div class="slider">
         <div class="slider__wrapper">
@@ -172,6 +175,7 @@
                   </span>
                 </span>
               </span>
+              </div>
             </div>
             <div class="slider__item">
               <span class="slider__item_inner">
@@ -207,9 +211,9 @@
         </div>
         <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
         <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
-      </div>
+      </div>-->
 
-      <!-- FAQ-->
+      <!-- FAQ -->
       <section class="faq">
         <header class="faq__header">
           <h2 class="faq__title">ПОШИРЕНІ ЗАПИТАННЯ</h2>
