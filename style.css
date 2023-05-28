@@ -3,6 +3,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 header {
   text-align: justify;
@@ -764,7 +765,7 @@ main div h4 {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  /*font-family: "Poppins", sans-serif;*/
   color: #fff;
   display: grid;
 }
