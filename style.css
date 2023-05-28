@@ -3,7 +3,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
 }
 header {
   text-align: justify;
@@ -215,8 +215,7 @@ nav a {
   top: 130px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
   left: 150px;
   opacity: 0; /* Початково приховуємо контейнер */
-  font-size: calc(24px + ((1vw - 4.2px) * 2.542373));
-  font-weight: bold;
+  font-size: calc(34px + ((1vw - 4.2px) * 2.542373));
   color: black;
   animation: fade-in-left 2s forwards;
   z-index: 2; /* Додано z-index: 2; для збільшення пріоритету над зображенням */
