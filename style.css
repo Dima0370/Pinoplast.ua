@@ -268,6 +268,7 @@ footer {
   margin-bottom: 10px;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 
 #map-flex {
@@ -659,6 +660,7 @@ main div h4 {
 
 .col-sm-2 {
   width: 16.66666667%;
+  margin-bottom: 60px;
 }
 .col-sm-5 {
   width: 41.66666667%;
@@ -836,23 +838,24 @@ i {
 
 /*START FAQ*/
 .faq {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 700px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  color: #dbdee1;
-  background-color: #313338;
+  color: #000000;
+  background-color: #ffffff;
   padding: 16px;
   border-radius: 8px;
 }
 .faq__title {
-  color: #fff;
+  color: #000000;
   margin-bottom: 20px;
   text-align: center;
 }
 .faq__separator {
-  border: 1px solid rgb(219 222 225 / 15%);
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  border: 1.5px solid rgba(189, 199, 200, 0.727);
   border-bottom: none;
 }
 .faq__item {
@@ -862,7 +865,7 @@ i {
 .faq__item:hover,
 .faq__item:focus,
 .faq__item--expanded {
-  background-color: #1e1f22;
+  background-color: #d3d3d384;
 }
 .faq__question {
   position: relative;
@@ -872,7 +875,7 @@ i {
   background-color: transparent;
   cursor: pointer;
   width: 100%;
-  color: #fff;
+  color: #020202;
   font: inherit;
   font-weight: bold;
   text-align: left;
@@ -1000,3 +1003,11 @@ i {
   opacity: 0;
 }
 /*FORM END*/
+
+#about {
+  padding-left: 70px;
+}
+
+/* .faq-container {
+  background-color: #0051ff;
+} */

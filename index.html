@@ -30,7 +30,7 @@
       </svg>
       <h1><a href="#div-back">Pinoplast</a></h1>
       <nav>
-        <a href="#div-back">Головна</a><a href="#C2">Про нас</a><a href="#proj">Послуги</a><span><a class="form-call">Зателефонуйте мені</a></span>
+        <a href="#div-back">Головна</a><a href="#C2">Про нас</a><a href="#proj">Послуги</a><span><a class="btn--show-modal">Зателефонуйте мені</a></span>
       </nav>
     </header>
 
@@ -48,7 +48,7 @@
             <div>
               <a>від нашого магазину!</a>
             </div>
-            <button class="custom-button" >Купити зараз</button>
+            <button class="custom-button btn--show-modal">Купити зараз</button>
             <div class="arrow-down"></div>
           </div>
         </div>
@@ -121,7 +121,7 @@
                       <p>Виконання робіт</p>
                     </div>
                     <div class="col-sm-2 text_center">
-                      <img src="cran.jpg?x18217" alt="ВЫКОНАННЯ РОБІТ" />
+                      <img src="cran.jpg?x18217" alt="ВИКОНАННЯ РОБІТ" />
                     </div>
                     <div class="col-sm-5 text_left"></div>
                     <div class="col-sm-12 bottom_bg">
@@ -131,7 +131,7 @@
                   <div class="col-sm-12">
                     <div class="col-sm-5 text_right"></div>
                     <div class="col-sm-2 text_center">
-                      <img src="ok.jpg?x18217" alt="ПРИЙОМ РАБІТ" />
+                      <img src="ok.jpg?x18217" alt="ПРИЙОМ РОБІТ" />
                     </div>
                     <div class="col-sm-5 text_left">
                       <span class="number">4</span>
@@ -146,7 +146,7 @@
           </div>
         </div>
       </section>
-      <!--  слайдер
+      <!-- слайдер
       <h2 id="C3"></h2>
       <div class="slider">
         <div class="slider__wrapper">
@@ -200,55 +200,57 @@
         </div>
         <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
         <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
-      </div>-->
+      </div> -->
 
       <!-- FAQ -->
-      <section class="faq">
+      <section class="faq faq-container">
         <header class="faq__header">
           <h2 class="faq__title">ПОШИРЕНІ ЗАПИТАННЯ</h2>
         </header>
         <hr class="faq__separator" />
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false" aria-controls="answer1">
-            What is Lorem Ipsum?
+            Як знати який вид пінопласту мені потрібен?
             <i class="faq__icon ri-arrow-drop-right-line"></i>
           </button>
           <div class="faq__answer" id="answer1" aria-hidden="true">
             <div class="faq__answer-inner">
-              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+              <p class="faq__answer-text">Просто залиште свій номер телефону у формі для зв'язку, ми Вам перетелефонуємо протягом 1 хв та надамо Безкоштовну консультацію.</p>
             </div>
           </div>
         </div>
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false" aria-controls="answer2">
-            How do I use Lorem Ipsum?
+            Чи здійснюєте ви доставку товару до місця будівництва?
             <i class="faq__icon ri-arrow-drop-right-line"></i>
           </button>
           <div class="faq__answer" id="answer2" aria-hidden="true">
             <div class="faq__answer-inner">
-              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+              <p class="faq__answer-text">Так, наші водії забезпечать безпечну та швидку доставку протягом 1 дня по Львівській області.</p>
             </div>
           </div>
         </div>
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false" aria-controls="answer3">
-            Is Lorem Ipsum free?
+            Чи є у Вас послуга монтажу пінопласту?
             <i class="faq__icon ri-arrow-drop-right-line"></i>
           </button>
           <div class="faq__answer" id="answer3" aria-hidden="true">
             <div class="faq__answer-inner">
-              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+              <p class="faq__answer-text">Так, наша команда кваліфікованих фахівців забезпечить Вам якісний та надійний монтаж пінопласту відповідно до Ваших потреб.</p>
             </div>
           </div>
         </div>
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false" aria-controls="answer4">
-            Do you offer refunds?
+            Які гарантії надаються на продукцію пінопласту?
             <i class="faq__icon ri-arrow-drop-right-line"></i>
           </button>
           <div class="faq__answer" id="answer4" aria-hidden="true">
             <div class="faq__answer-inner">
-              <p class="faq__answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan mauris quis aliquet sollicitudin.</p>
+              <p class="faq__answer-text">
+                Ми даємо гарантію на 10 років на усю нашу продукцію. У разі виявлення дефектів протягом гарантійного періоду, ми забезпечуємо заміну або відшкодування коштів.
+              </p>
             </div>
           </div>
         </div>
@@ -264,7 +266,7 @@
         </div>
 
         <div class="links-container">
-          <nav><a href="#C1">Про нас</a><a href="#C2">Часті запитання</a><a href="#C3">Зв'язок з нами</a></nav>
+          <nav><a href="#C1" id="about"> Про нас</a><a href="#C2">Наші послуги</a><a class="btn--show-modal">Зв'язок з нами</a></nav>
         </div>
 
         <div class="icons">
@@ -286,11 +288,11 @@
     </footer>
 
     <!-- FORM -->
-    <div class="modal hidden">
+    <div class="modal hidden" id="form">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
         Замовити пінопласт <br />
-        в <span class="highlight">1 хвилину</span>
+        за <span class="highlight">1 хвилину</span>
       </h2>
       <form class="modal__form">
         <label>ПІБ</label>
