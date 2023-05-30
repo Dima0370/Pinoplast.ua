@@ -618,7 +618,7 @@ main div h4 {
   color: black;
 }
 #proj {
-  padding-top: 93px;
+  padding-top: 30px;
   background-color: white; /* Змінено на #proj, #proj * */
 }
 
@@ -1074,6 +1074,8 @@ i {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* Next & previous buttons */
