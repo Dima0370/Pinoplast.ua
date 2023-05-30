@@ -357,16 +357,12 @@ footer {
   margin-top: 10px;
 }
 
-button {
-  padding: 5px 10px;
-  font-size: 16px;
-}
 .prev-slide {
   margin-right: 10px;
 }
 
 .next-alide {
-  margin-left: 10px;
+  margin-left: 100px;
 }
 
 /* стили для элемента body */
