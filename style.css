@@ -329,6 +329,7 @@ footer {
   bottom: 150px;
   color: white;
   font-size: 22px;
+  text-align: left;
   line-height: 1.14;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
@@ -354,16 +355,22 @@ footer {
 }
 
 .controls {
-  margin-top: 10px;
+  position: absolute;
+  left: 307px;
+  top: 75%; /* Змініть це значення на бажану висоту від верхньої межі екрану */
+  z-index: 2;
 }
 
 .prev-slide {
-  margin-right: 10px;
+  margin-right: 25px;
+  display: inline-block;
 }
 
-.next-alide {
-  margin-left: 100px;
+.next-slide {
+  margin-left: 25px;
+  display: inline-block;
 }
+
 
 /* стили для элемента body */
 /* body {
