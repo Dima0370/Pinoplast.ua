@@ -98,15 +98,17 @@ overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 });
+
+
 /*Карусель*/
 document.addEventListener("DOMContentLoaded", function (event) {
-  var slides = document.getElementsByClassName("slide");
-  var currentSlide = 0;
-  var prevButton = document.querySelector(".prev");
-  var nextButton = document.querySelector(".next");
+  let slides = document.getElementsByClassName("slide");
+  let currentSlide = 0;
+  let prevButton = document.querySelector(".prev-slide");
+  let nextButton = document.querySelector(".next-slide");
 
   function showSlide(slideIndex) {
-    for (var i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].classList.remove("show");
     }
     slides[slideIndex].classList.add("show");
