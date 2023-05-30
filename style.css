@@ -299,10 +299,13 @@ footer {
 
 /*Карусель*/
 .carousel {
-  width: 400px;
-  height: 300px;
+  width: 800px;
+  height: 600px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide {
@@ -312,8 +315,12 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-}
+  text-align: center;
 
+}
+.text-slide{
+
+}
 .slide img {
   width: 100%;
   height: auto;
@@ -327,6 +334,9 @@ footer {
   font-size: 18px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #db0cc3;
 }
 
 .show {
