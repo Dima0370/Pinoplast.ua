@@ -298,6 +298,50 @@ footer {
 }
 
 /*Карусель*/
+.carousel {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slide p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
 /* стили для элемента body */
 /* body {
   margin: 0;

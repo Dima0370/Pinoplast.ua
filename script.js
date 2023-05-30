@@ -98,3 +98,38 @@ overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 });
+/*Карусель*/
+document.addEventListener("DOMContentLoaded", function(event) {
+  var slides = document.getElementsByClassName("slide");
+  var currentSlide = 0;
+  var prevButton = document.querySelector(".prev");
+  var nextButton = document.querySelector(".next");
+
+  function showSlide(slideIndex) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+    }
+    slides[slideIndex].classList.add("show");
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  }
+
+  showSlide(currentSlide); // Показати перший слайд
+
+  nextButton.addEventListener("click", nextSlide);
+  prevButton.addEventListener("click", prevSlide);
+});
