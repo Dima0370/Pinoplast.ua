@@ -322,7 +322,18 @@ footer {
   height: 540px;
   display: block;
   margin: 0 50px 20px 600px; /* Замініть останнє значення на 0 */
+  animation: slideIn 2s forwards;
 }
+
+@keyframes slideIn {
+  0% {
+    margin-left: 900px;
+  }
+  100% {
+    margin-left: 600px;
+  }
+}
+
 .bg-img__label {
   position: absolute;
   bottom: 39px;
@@ -342,13 +353,21 @@ footer {
   font-size: 22px;
   text-align: left;
   line-height: 1.14;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
   width: 300px;
   height: 300px;
   left: 36.5%;
   transform: translateX(-50%);
   z-index: 2;
+  animation: pIn 2s forwards ;
+}
+@keyframes pIn {
+  0% {
+    left: 33%;
+  }
+  100% {
+    left: 36.5%;
+  }
 }
 .slide .object {
   position: absolute;
