@@ -17,19 +17,6 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 L.marker([49.86360663663534, 24.040539034816224]).addTo(map).bindPopup("Вулиця Липинського, 54а <br> Пн-Сб: 08:00-20:00").openPopup();
 
-// mySlider.oninput = showSliderValue;
-
-// function showSliderValue() {
-//   result.innerText = this.value;
-// }
-/*document.addEventListener('DOMContentLoaded', function () {
-  // инициализация слайдера
-  var slider = new SimpleAdaptiveSlider('.slider', {
-    autoplay: true,
-    interval: 10000,
-  });
-});*/
-
 //Скрол анімація
 function onEntry(entry) {
   entry.forEach(change => {
@@ -99,7 +86,6 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 });
 
-
 /*Карусель*/
 document.addEventListener("DOMContentLoaded", function (event) {
   let slides = document.getElementsByClassName("slide");
@@ -130,44 +116,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     showSlide(currentSlide);
   }
 
-  showSlide(currentSlide); // Показати перший слайд
+  showSlide(currentSlide);
 
   nextButton.addEventListener("click", nextSlide);
   prevButton.addEventListener("click", prevSlide);
 });
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides((slideIndex += n));
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides((slideIndex = n));
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-// }
 
 var slideIndex = 0;
 showSlides();
@@ -183,5 +136,5 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2500); // Change image every 2 seconds
+  setTimeout(showSlides, 2500);
 }

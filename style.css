@@ -111,8 +111,8 @@ nav a {
 }
 .arrow-down {
   position: fixed;
-  top: 375px;
-  left: 60%;
+  top: 500px;
+  left: 80%;
   width: 20px;
   height: 20px;
   border-bottom: 2px solid white;
@@ -219,12 +219,14 @@ nav a {
   top: 130px; /* Змінено top на 10px; для встановлення відступу від верхнього краю */
   left: 150px;
   opacity: 0; /* Початково приховуємо контейнер */
-  font-size: calc(34px + ((1vw - 4.2px) * 2.542373));
-  color: black;
+  /* font-size: calc(34px + ((1vw - 4.2px) * 2.542373)); */
+  font-size: 53px;
+  color: rgb(255, 255, 255);
   animation: fade-in-left 2s forwards;
   z-index: 2; /* Додано z-index: 2; для збільшення пріоритету над зображенням */
   letter-spacing: 0.02em;
   line-height: 1.31;
+  background-color: #3b3b3bb6;
 }
 /*Кінець першої сторінки*/
 h1 a {
@@ -243,24 +245,6 @@ footer {
   height: 100%;
   background-color: #83918f;
 }
-
-/* #map {
-  height: 300px;
-  width: 400px;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-#map-flex {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  padding: 0px;
-  margin: 10px;
-  display: flex;
-  justify-content: flex-end;
-} */
 
 #map {
   height: 300px;
@@ -401,12 +385,6 @@ footer {
   display: inline-block;
   cursor: pointer; /* Додайте цю властивість */
 }
-
-/* стили для элемента body */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-} */
 
 /* span, */
 a {
