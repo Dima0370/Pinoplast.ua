@@ -336,8 +336,8 @@ footer {
 
 .bg-img__label {
   position: absolute;
-  bottom: 39px;
-  right: 125px;
+  bottom: 93px;
+  right: 268px;
   margin: 0;
   padding: 15px 20px;
   display: inline-block;
@@ -359,7 +359,7 @@ footer {
   left: 36.5%;
   transform: translateX(-50%);
   z-index: 2;
-  animation: pIn 2s forwards ;
+  animation: pIn 2s forwards;
 }
 @keyframes pIn {
   0% {
@@ -385,8 +385,8 @@ footer {
 
 .controls {
   position: absolute;
-  left: 300px;
-  top: 75%; /* Змініть це значення на бажану висоту від верхньої межі екрану */
+  left: 360px;
+  top: 70%; /* Змініть це значення на бажану висоту від верхньої межі екрану */
   z-index: 2;
 }
 
@@ -394,16 +394,13 @@ footer {
   margin-right: 20px;
   display: inline-block;
   cursor: pointer; /* Додайте цю властивість */
-
 }
 
 .next-slide {
   margin-left: 20px;
   display: inline-block;
   cursor: pointer; /* Додайте цю властивість */
-
 }
-
 
 /* стили для элемента body */
 /* body {
@@ -1228,4 +1225,8 @@ i {
   to {
     opacity: 1;
   }
+}
+
+marquee img {
+  height: 200px;
 }
